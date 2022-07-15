@@ -46,3 +46,8 @@ body{
   --ifm-footer-link-color:hsla(0,0%,100%,0.5);
   --ifm-footer-link-hover-color: hsla(0,0%,100%,1);
 }
+.intro-logo{
+  width: 96px;
+  margin-bottom: -44px;
+  margin-top: 32px;
+}
