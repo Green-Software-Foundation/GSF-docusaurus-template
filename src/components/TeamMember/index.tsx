@@ -1,5 +1,4 @@
 import React from "react";
-import Gravatar from "react-gravatar";
 import styles from "./styles.module.css";
 
 type TeamMemberType = {
@@ -20,7 +19,6 @@ export default function TeamMember({
   children,
   role,
   company,
-  email,
   github,
   twitter,
   linkedin,
@@ -28,7 +26,8 @@ export default function TeamMember({
   return (
     <div className={styles.teamMember}>
       <div className={styles.avatar}>
-        <Gravatar email={email} size={100} />
+        {/* <Gravatar email={email} size={100} /> */}
+        <img src={`https://github.com/${github}.png`} alt="avatar" />
       </div>
       <div>
         <span className={styles.name}>{children}</span>
@@ -36,7 +35,7 @@ export default function TeamMember({
         <span className={styles.company}>@{company}</span>
         <div className={styles.social}>
           {github && (
-            <a href={github} target="_blank" rel="noopener noreferrer">
+            <a href={`https://github.com/${github}`} target="_blank" rel="noopener noreferrer">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -53,7 +52,7 @@ export default function TeamMember({
             </a>
           )}
           {twitter && (
-            <a href={twitter} target="_blank" rel="noopener noreferrer">
+            <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
               <svg
                 aria-hidden="true"
                 focusable="false"
@@ -70,7 +69,7 @@ export default function TeamMember({
             </a>
           )}
           {linkedin && (
-            <a href={linkedin} target="_blank" rel="noopener noreferrer">
+            <a href={`https://www.linkedin.com/in/${linkedin}`} target="_blank" rel="noopener noreferrer">
               <svg
                 aria-hidden="true"
                 focusable="false"
