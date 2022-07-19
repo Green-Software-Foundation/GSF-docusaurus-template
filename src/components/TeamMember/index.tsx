@@ -5,8 +5,7 @@ type TeamMemberType = {
   children: string;
   role: string;
   company: string;
-  email: string;
-  github?: string;
+  github: string;
   twitter?: string;
   linkedin?: string;
 };
@@ -26,7 +25,6 @@ export default function TeamMember({
   return (
     <div className={styles.teamMember}>
       <div className={styles.avatar}>
-        {/* <Gravatar email={email} size={100} /> */}
         <img src={`https://github.com/${github}.png`} alt="avatar" />
       </div>
       <div>
